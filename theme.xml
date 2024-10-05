@@ -1,0 +1,581 @@
+<!--
+theme name:     Cocktail RG40XXH
+creator:		Dwayne Hurst
+version         1
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+   <formatVersion>7</formatVersion>
+   <include subset="Floor Option" name="1">./F1.xml</include>
+   <include subset="Floor Option" name="2">./F2.xml</include>
+   <include subset="Floor Option" name="3">./F3.xml</include>
+   <include subset="Floor Option" name="4">./F4.xml</include>
+   <include subset="Floor Option" name="5">./F5.xml</include>
+   <include subset="Floor Option" name="6">./F6.xml</include>
+   <include subset="Floor Option" name="7">./F7.xml</include>
+   <include subset="Floor Option" name="8">./F8.xml</include>
+   <include subset="Floor Option" name="9">./F9.xml</include>
+   <include subset="Floor Option" name="10">./F10.xml</include>         
+   <include subset="Character" name="On">./C1.xml</include> 
+   <include subset="Character" name="Off">./C2.xml</include>      
+   <include subset="Stool Option" name="1 Stool">./S1.xml</include>
+   <include subset="Stool Option" name="2 Stools">./S2.xml</include>
+   <include subset="Stool Option" name="No Stools">./S3.xml</include>     
+   <include subset="Video Style" name="Random">./video-random.xml</include>
+   <include subset="Video Style" name="Custom">./video-custom.xml</include>
+   <include subset="Video Style" name="Off">./video-off.xml</include>
+   <include subset="Gamelist Font Size" name="Default">./gamelist-medium.xml</include> 
+   <include subset="Gamelist Font Size" name="Large">./gamelist-large.xml</include>
+   <include subset="Gamelist Font Size" name="Small">./gamelist-small.xml</include>        
+   
+<feature supported="carousel">
+   <view name="system">
+   
+      <carousel name="systemcarousel">
+        <type>horizontal</type>
+        <pos>1 1</pos>
+        <logoAlignment>center</logoAlignment>         
+        <size>1 1</size>
+        <logoSize>0.01 0.01</logoSize>        
+        <logoScale>1</logoScale>
+        <zIndex>1</zIndex>          
+        <color>00000000</color>
+        <maxLogoCount>3</maxLogoCount>       
+      </carousel>              
+
+		<image name="logo">
+		<linearSmooth>true</linearSmooth>
+			<storyboard event="activate">
+				<animation property="x" to="2.4" begin="2000" duration="500" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="x" to="2.4" begin="2000" duration="500" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="x" to="2.4" begin="2000" duration="500" mode="EaseIn"/>
+			</storyboard>
+		</image>
+
+       <image name="logo">
+	     <path>./_inc/wheels1/${system.theme}.png</path>
+       </image>           		
+
+       <image name="logovideooff" extra="true">
+	     <path>./_inc/wheels1/${system.theme}.png</path>
+        <pos>0.321 0.17854</pos>
+        <logoAlignment>center</logoAlignment>         
+        <size>0.3546 0.6333</size>
+        <zIndex>14</zIndex>        	     
+       </image>   
+    
+       <image name="background661" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/walls/${system.theme}.png</path>               
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>2</zIndex>		 
+      </image>
+       <image name="background667" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/cocktails/${system.theme}.png</path>               
+         <pos>0.034 1</pos>
+         <size>0.5229 0.69722</size>
+         <zIndex>5</zIndex>
+			<storyboard>
+				<animation property="y" from="1" to="0.29" begin="250" duration="500" mode="Linear"/>
+				<animation property="scale" from="1.5" to="1" begin="250" duration="500" mode="Linear"/>				
+			</storyboard>
+		</image>       
+		                    
+       <image name="background368" extra="true">
+         <origin>0 0</origin>     
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>10</zIndex>		 
+      </image>       
+       <image name="background267" extra="true">
+         <origin>0 0</origin>      
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>1</zIndex>		 
+      </image>                      
+                            
+      <text name="systemInfo">     
+         <pos>-0.34 0.015</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>ffffff</color>
+         <glowColor>000000</glowColor>      
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+	     <fontSize>0.05</fontSize>
+         <zIndex>120</zIndex>
+			<storyboard>
+				<animation property="opacity" from="0" to="0" duration="100" mode="Linear"/>
+				<animation property="opacity" from="0" to="1" begin="100" duration="100" mode="Linear"/>
+			</storyboard>                      	     
+      </text>             		
+            
+   </view>
+</feature>
+
+   <view name="system">
+      <helpsystem name="help">
+         <pos>1.5 0</pos>      
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>             
+         <textColor>101010</textColor>
+         <iconColor>101010</iconColor>
+      </helpsystem>
+   </view>  
+
+   <view name="detailed,video,basic,grid,gamecarousel">
+      <helpsystem name="help">
+         <pos>1.5 0</pos>       
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>             
+         <textColor>101010</textColor>
+         <iconColor>101010</iconColor>
+      </helpsystem>
+   </view> 
+
+   <view name="basic">
+      <textlist name="gamelist">
+        <pos>0.028 0.028</pos>
+        <alignment>center</alignment>         
+        <size>0.935 0.86</size>	                 
+         <color>000000</color>             
+	     <selectedColor>F1001A</selectedColor>
+	     <selectorColor>00000000</selectorColor>
+	     <selectorHeight>0.0235</selectorHeight>  
+	     <selectorHeight>0.0235</selectorHeight>  
+         <primaryColor>000000</primaryColor>
+         <secondaryColor>000000</secondaryColor>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>0</forceUppercase>
+         <zIndex>33</zIndex>                          
+      </textlist>    
+      <image name="background668" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/basic.png</path>       
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>4</zIndex>                               
+      </image>     
+      <text name="system-name" extra="true">
+         <origin>0 0</origin>
+         <pos>0.03 0.753</pos>
+         <size>0.94 0.4</size>
+         <fontSize>0.028</fontSize>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <color>000000</color>     
+         <text>${system.fullName}</text>
+         <zIndex>50</zIndex>        
+      </text>
+                          
+   </view>   
+   
+   <view name="video"> 
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.283 0.29</pos>
+         <maxSize>0.5 0.518</maxSize>          
+         <zIndex>60</zIndex> 
+         <delay>0.001</delay>                       
+      </video>
+      <image name="background668" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/video.png</path>       
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>4</zIndex>                               
+      </image>     
+      <text name="system-name" extra="true">
+         <origin>0 0</origin>
+         <pos>0.03 0.753</pos>
+         <size>0.94 0.4</size>
+         <fontSize>0.028</fontSize>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <color>000000</color>     
+         <text>${system.fullName}</text>
+         <zIndex>50</zIndex>        
+      </text>                        
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.14 0.682</pos>
+         <maxSize>0.21 0.22</maxSize>
+         <zIndex>33</zIndex>          
+      </image>
+
+      <textlist name="gamelist">
+        <pos>0.5819 0.028</pos>
+        <alignment>left</alignment>         
+        <size>0.393 0.86</size>		                 
+         <color>000000</color>
+         <glowSize>1</glowSize>               
+	     <selectedColor>F1001A</selectedColor>
+	     <selectorColor>00000000</selectorColor>
+	     <selectorHeight>0.01</selectorHeight>
+	     <horizontalMargin>0.01</horizontalMargin>    	       
+         <primaryColor>000000</primaryColor>
+         <secondaryColor>000000</secondaryColor>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>0</forceUppercase>
+         <zIndex>30</zIndex>                          
+      </textlist>
+
+      <image name="md_marquee">
+         <origin>0.5 0.5</origin>
+         <pos>0.4 0.68</pos>
+         <maxSize>0.2 0.1</maxSize>
+         <zIndex>33</zIndex>                   
+      </image>                        
+   </view>       
+  
+   <view name="detailed">
+      <image name="background668" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/video.png</path>       
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>4</zIndex>                               
+      </image>    
+      <text name="system-name" extra="true">
+         <origin>0 0</origin>
+         <pos>0.03 0.753</pos>
+         <size>0.94 0.4</size>
+         <fontSize>0.028</fontSize>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <color>000000</color>     
+         <text>${system.fullName}</text>
+         <zIndex>50</zIndex>        
+      </text>      
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.283 0.29</pos>
+         <maxSize>0.5 0.518</maxSize>          
+         <zIndex>60</zIndex>                   
+      </image>
+      <textlist name="gamelist">
+        <pos>0.5819 0.028</pos>
+        <alignment>left</alignment>         
+        <size>0.393 0.86</size>		                 
+         <color>000000</color>
+         <glowSize>1</glowSize>               
+	     <selectedColor>F1001A</selectedColor>
+	     <selectorColor>00000000</selectorColor>
+	     <selectorHeight>0.01</selectorHeight>
+	     <horizontalMargin>0.01</horizontalMargin>    	       
+         <primaryColor>000000</primaryColor>
+         <secondaryColor>000000</secondaryColor>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>0</forceUppercase>
+         <zIndex>30</zIndex>                          
+      </textlist>
+      
+      <image name="md_marquee">
+         <origin>0.5 0.5</origin>
+         <pos>0.285 0.68</pos>
+         <maxSize>0.4 0.2</maxSize>
+         <zIndex>33</zIndex>                   
+      </image>                    
+   </view>     
+   
+      
+   <view name="gamecarousel,grid">
+      <text name="md_lbl_genre, md_lbl_players, md_lbl_rating, md_rating, md_players, md_genre">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.034</fontSize>
+      </text>
+      <text name="md_lbl_rating">
+         <pos>1.585 0.345</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+      </text>   
+      <rating name="md_rating">
+         <pos>0.58 0.5</pos>
+         <size>0.55 0.04</size>
+         <zIndex>40</zIndex>
+         <filledPath>./_inc/images/star_full.png</filledPath>
+         <unfilledPath>./_inc/images/star_hollow.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.58 0.325</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>   
+      </text>
+      <text name="md_players">
+         <pos>0.7 0.325</pos>
+         <size>0.585 0.1</size>
+         <color>F1001A</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>          
+      </text>
+      <text name="md_lbl_genre">
+         <pos>0.58 0.4</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>                            
+      </text>
+      <text name="md_genre">
+         <pos>0.7 0.4</pos>
+         <size>0.28 0.1</size>
+         <color>F1001A</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>                   
+      </text>          
+   </view>
+
+   <view name="detailed,video">
+      <text name="md_lbl_genre, md_lbl_players, md_lbl_rating, md_rating, md_players, md_genre">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.034</fontSize>
+      </text>
+      <text name="md_lbl_rating">
+         <pos>1.585 0.345</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+      </text>   
+      <rating name="md_rating">
+         <pos>1.58 0.5</pos>
+         <size>0.55 0.04</size>
+         <zIndex>40</zIndex>
+         <filledPath>./_inc/images/star_full.png</filledPath>
+         <unfilledPath>./_inc/images/star_hollow.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.027 0.76</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>   
+      </text>
+      <text name="md_players">
+         <pos>0.15 0.76</pos>
+         <size>0.585 0.1</size>
+         <color>F1001A</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>          
+      </text>
+      <text name="md_lbl_genre">
+         <pos>0.028 0.82</pos>
+         <size>0.6 0.1</size>
+         <color>000000</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>                            
+      </text>
+      <text name="md_genre">
+         <pos>0.15 0.82</pos>
+         <size>0.28 0.1</size>
+         <color>F1001A</color>
+         <zIndex>40</zIndex>
+         <glowSize>1</glowSize>                   
+      </text>          
+   </view>
+
+<view name="gamecarousel">
+<gamecarousel name="gamecarousel">
+        <zIndex>400</zIndex>	      
+        <type>horizontal</type>
+        <pos>0.025 0.6</pos>       
+        <size>0.9375 0.288</size>>	
+        <logoSize>0.4 0.75</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>5</maxLogoCount>
+		<logoAlignment>center</logoAlignment>        
+		<imageSource>image</imageSource>
+</gamecarousel>
+
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.29 0.29</pos>
+         <maxSize>0.517 0.518</maxSize>          
+         <zIndex>60</zIndex>
+         <delay>0.001</delay>                         
+      </video>
+      <image name="background668" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/grid.png</path>       
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>1</zIndex>                               
+      </image>    
+      <text name="system-name" extra="true">
+         <origin>0 0</origin>
+         <pos>0.03 0.753</pos>
+         <size>0.94 0.4</size>
+         <fontSize>0.028</fontSize>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <color>000000</color>     
+         <text>${system.fullName}</text>
+         <zIndex>50</zIndex>        
+      </text>
+      <image name="md_marquee">
+         <origin>0.5 0.5</origin>
+         <pos>0.77 0.17</pos>
+         <maxSize>0.38 0.24</maxSize>
+         <zIndex>33</zIndex>                   
+      </image>  
+                 
+</view>
+ 
+  <view name="grid">       	 
+    <imagegrid name="gamegrid">
+	  <margin>0.024 0.024</margin>
+        <pos>0.025 0.6</pos>       
+        <size>0.9375 0.288</size>		 
+      <padding>0.024 0.024 0.024 0.024</padding>
+      <zIndex>6</zIndex>
+      <autoLayout>5 1</autoLayout>
+      <autoLayoutSelectedZoom>1.15</autoLayoutSelectedZoom>
+      <animateSelection>true</animateSelection>
+      <centerSelection>false</centerSelection>
+	  <scrollLoop>true</scrollLoop>
+	  <scrollSound></scrollSound>
+	  <scrollDirection>vertical</scrollDirection>
+	  <scale>0</scale>
+	  <storyboard>
+	 <animation property="scale" from="0" to="1" begin="400" duration="175" mode="EaseOut"/>
+      </storyboard>
+	</imagegrid>
+
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.29 0.29</pos>
+         <maxSize>0.517 0.518</maxSize>          
+         <zIndex>60</zIndex>
+         <delay>0.001</delay>                         
+      </video>
+      <image name="background668" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/images/grid.png</path>       
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>1</zIndex>                               
+      </image>    
+      <text name="system-name" extra="true">
+         <origin>0 0</origin>
+         <pos>0.03 0.753</pos>
+         <size>0.94 0.4</size>
+         <fontSize>0.028</fontSize>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <color>000000</color>     
+         <text>${system.fullName}</text>
+         <zIndex>50</zIndex>        
+      </text>
+      <image name="md_marquee">
+         <origin>0.5 0.5</origin>
+         <pos>0.77 0.17</pos>
+         <maxSize>0.38 0.24</maxSize>
+         <zIndex>33</zIndex>                   
+      </image>  
+       
+<gridtile name="default">
+<padding>1 1</padding>
+<backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+<backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+<imageSizeMode>maxSize</imageSizeMode>
+<imageColor>FFFFFF</imageColor>
+<reflexion>0.09 0.0</reflexion>
+</gridtile>
+
+<gridtile name="selected">
+<backgroundCenterColor>ff000000</backgroundCenterColor>
+<backgroundEdgeColor>ff000000</backgroundEdgeColor>
+<padding>2 2</padding>
+<imageColor>FFFFFF</imageColor>
+</gridtile>
+
+<text name="gridtile">
+<color>1C00ff00</color>
+<backgroundColor>00000000</backgroundColor>
+<fontSize>0.022</fontSize>
+<alignment>center</alignment>
+<size>1 0.1</size>
+</text>
+
+<text name="gridtile_selected">
+<color>1C00ff00</color>
+<glowColor>ffffff</glowColor>
+<glowSize>0</glowSize>
+</text>
+
+
+</view>    
+   
+    <view name="menu">
+    <menuBackground name="menubg">
+      <color>2d2d2d</color>
+    </menuBackground>
+	<menuText name="menutext, menutitle">
+      <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+      <fontSize>.039</fontSize>
+      <color>ffffff</color>
+    </menuText>
+    <menuTextEdit name="menutextedit">
+      <inactive>./_inc/images/textinput_inactive.png</inactive>
+      <active>./_inc/images/textinput_active.png</active>
+    </menuTextEdit>
+  </view>
+ 
+
+	
+ 
+
+
+	<view name="screen">
+		<text name="clock">
+         <color>000000</color>
+			<fontSize>0.033</fontSize>
+			<pos>0.87 0.9</pos>
+			<size>0.1 0.1</size>
+		         <zIndex>100</zIndex> 	
+			<alignment>right</alignment>
+			<verticalAlignment>center</verticalAlignment>
+			<fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+		</text>
+		<controllerActivity name="controllerActivity">
+			<pos>1.005 1.005</pos>
+			<size>0.185 0.023</size>
+			<itemSpacing>0.003</itemSpacing>
+			<color>000000</color>
+		<!-- controllers -->
+			<imagePath>./_inc/images/gamepad.svg</imagePath>
+			<gunPath>./_inc/images/gun.svg</gunPath>
+			<wheelPath>./_inc/images/wheel.svg</wheelPath>
+			<hotkeyColor>FF0000</hotkeyColor>
+		</controllerActivity>
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.79 0.9225</pos>
+			<size>0.08 0.06</size>
+			  <zIndex>100</zIndex>
+			<horizontalAlignment>right</horizontalAlignment>
+			<incharge>./_inc/images/battery/incharge.svg</incharge>
+			<full>./_inc/images/battery/full.svg</full>
+			<at75>./_inc/images/battery/75.svg</at75>
+			<at50>./_inc/images/battery/50.svg</at50>
+			<at25>./_inc/images/battery/25.svg</at25>
+			<empty>./_inc/images/battery/empty.svg</empty>
+			<planemodeIcon>./_inc/icons/Planemode.png</planemodeIcon>
+			<color>000000</color>
+		</batteryIndicator>
+	</view>  
+</theme>

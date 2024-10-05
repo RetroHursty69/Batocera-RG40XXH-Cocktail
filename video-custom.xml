@@ -1,0 +1,25 @@
+<theme>
+   <formatVersion>7</formatVersion>
+
+<view name="system">
+
+     <video name="backgroundvideo" extra="true">
+        <path>./_inc/videos/${system.theme}.mp4</path>          
+        <visible>true</visible>	 	 
+        <rotation>0</rotation>  
+        <roundCorners>0.00</roundCorners>             
+        <color>FFFFFF</color> 
+         <origin>0 0</origin>
+         <pos>0.3402 0</pos>
+         <size>0.66 0.6268</size>          
+         <zIndex>3</zIndex>                          
+     </video>     
+  
+       <image name="logovideooff" extra="true">
+         <storyboard>
+            <animation property="opacity" to="0" begin="1" duration="1" mode="EaseIn"/>
+		 </storyboard>	        	     
+       </image>  
+        
+</view>
+</theme>

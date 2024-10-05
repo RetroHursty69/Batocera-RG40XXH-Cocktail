@@ -1,0 +1,28 @@
+<!--
+theme name:     Dreambot RG40XXH
+creator:		Dwayne Hurst
+version         1
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>       
+   
+<feature supported="carousel">
+   <view name="system">
+ 
+       <image name="background657" extra="true">
+         <origin>0 0</origin>
+	     <path>./_inc/stools/${system.theme}.png</path>               
+         <pos>-0.22 0.59</pos>
+         <size>0.159 0.4222</size>
+         <zIndex>6</zIndex>
+			<storyboard>
+				<animation property="x" from="0" to="-0.22" duration="50" mode="Linear"/>
+				<animation property="x" from="-0.22" to="-0.021" begin="500" duration="500" mode="Linear"/>
+			</storyboard>           		 
+      </image>    
+            
+   </view>
+</feature>
+</theme>
